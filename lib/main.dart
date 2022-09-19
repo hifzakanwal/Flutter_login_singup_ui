@@ -1,3 +1,4 @@
+import 'package:firebase_auth/SignUpScreen.dart';
 import 'package:flutter/material.dart';
 import 'loginscreen.dart';
 import 'Component.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Color(0xff2470c7),
       ),
       home:
-          loginscreen(), // This trailing comma makes auto-formatting nicer for build methods.
+          signUpScreen(), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
