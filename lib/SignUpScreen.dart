@@ -3,6 +3,8 @@ import 'dart:ui';
 import 'package:firebase_auth/Component.dart';
 import 'package:flutter/material.dart';
 
+import 'loginscreen.dart';
+
 class signUpScreen extends StatefulWidget {
   const signUpScreen({super.key});
 
@@ -91,7 +93,14 @@ class _signUpScreenState extends State<signUpScreen> {
                           SizedBox(
                             height: 55,
                           ),
-                          roundbutton(title: "Sign Up", tapfun: () {}),
+                          roundbutton(
+                              title: "Sign Up",
+                              tapfun: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => loginscreen()));
+                              }),
                         ],
                       ),
                     ),
@@ -108,12 +117,19 @@ class _signUpScreenState extends State<signUpScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    "Already have an account",
+                    "Already have an account?",
                     style: TextStyle(
                       color: Colors.white,
                     ),
                   ),
-                  TextButton(onPressed: () {}, child: Text("Login")),
+                  TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => loginscreen()));
+                      },
+                      child: Text("Login")),
                 ],
               ),
             ),

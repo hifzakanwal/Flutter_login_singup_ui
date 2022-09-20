@@ -1,7 +1,12 @@
 import 'dart:ui';
 
 import 'package:firebase_auth/Component.dart';
+import 'package:firebase_auth/Forgetpassword.dart';
+import 'package:firebase_auth/Loginwithphoneno.dart';
+import 'package:firebase_auth/SignUpScreen.dart';
 import 'package:flutter/material.dart';
+
+import 'Homescreen.dart';
 
 class loginscreen extends StatefulWidget {
   const loginscreen({super.key});
@@ -95,7 +100,13 @@ class _loginscreenState extends State<loginscreen> {
                             mainAxisAlignment: MainAxisAlignment.end,
                             children: [
                               TextButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                forgetpassword()));
+                                  },
                                   child: Text(
                                     "Forgot password?",
                                     style: TextStyle(color: Colors.black),
@@ -105,7 +116,15 @@ class _loginscreenState extends State<loginscreen> {
                           SizedBox(
                             height: 55,
                           ),
-                          roundbutton(title: "Login", tapfun: () {}),
+                          roundbutton(
+                              title: "Login",
+                              tapfun: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            homescreen(name: '')));
+                              }),
                           SizedBox(
                             height: 10,
                           ),
@@ -113,16 +132,25 @@ class _loginscreenState extends State<loginscreen> {
                           SizedBox(
                             height: 10,
                           ),
-                          Container(
-                            height: 37,
-                            width: 49,
-                            decoration: BoxDecoration(
-                              color: bcolor,
-                              shape: BoxShape.circle,
-                            ),
-                            child: Icon(
-                              Icons.phone,
-                              color: Colors.white,
+                          InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          loginwithphoneno()));
+                            },
+                            child: Container(
+                              height: 37,
+                              width: 49,
+                              decoration: BoxDecoration(
+                                color: bcolor,
+                                shape: BoxShape.circle,
+                              ),
+                              child: Icon(
+                                Icons.phone,
+                                color: Colors.white,
+                              ),
                             ),
                           )
                         ],
@@ -146,7 +174,14 @@ class _loginscreenState extends State<loginscreen> {
                       color: Colors.white,
                     ),
                   ),
-                  TextButton(onPressed: () {}, child: Text("Sign Up")),
+                  TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => signUpScreen()));
+                      },
+                      child: Text("Sign Up")),
                 ],
               ),
             ),

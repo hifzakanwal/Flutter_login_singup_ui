@@ -17,7 +17,7 @@ class _homescreenState extends State<homescreen> {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: bcolor,
-          title: Text("Home Screen"),
+          title: Text(" Home Screen "),
           actions: [
             IconButton(
               onPressed: () {

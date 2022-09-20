@@ -21,7 +21,7 @@ class roundbutton extends StatelessWidget {
         width: 150,
         decoration: BoxDecoration(
           color: bcolor,
-          borderRadius: BorderRadius.circular(25),
+          borderRadius: BorderRadius.circular(25.2),
         ),
         child: Center(
             child: loading

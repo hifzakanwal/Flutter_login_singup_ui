@@ -1,4 +1,5 @@
 import 'package:firebase_auth/Component.dart';
+import 'package:firebase_auth/verifycodescreen.dart';
 import 'package:flutter/material.dart';
 import 'package:country_picker/country_picker.dart';
 
@@ -72,7 +73,12 @@ class _loginwithphonenoState extends State<loginwithphoneno> {
                     ))),
           ),
         ),
-        roundbutton(title: "Continue", tapfun: () {}),
+        roundbutton(
+            title: "Continue",
+            tapfun: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => verifycode()));
+            }),
       ]),
     );
   }

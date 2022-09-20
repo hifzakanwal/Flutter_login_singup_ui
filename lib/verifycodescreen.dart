@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:firebase_auth/Component.dart';
+import 'package:firebase_auth/Homescreen.dart';
 import 'package:flutter/material.dart';
 import 'package:pinput/pinput.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -73,6 +74,10 @@ class _verifycodeState extends State<verifycode> {
           roundbutton(
               title: "Verify",
               tapfun: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => homescreen(name: '')));
                 print(code);
               }),
         ],

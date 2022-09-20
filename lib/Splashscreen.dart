@@ -29,8 +29,8 @@ class _splashscreenState extends State<splashscreen> {
       body: Center(
           child: Lottie.network(
               'https://assets1.lottiefiles.com/packages/lf20_s3zjvwxq.json',
-              width: 200,
-              height: 200,
+              width: 201,
+              height: 201,
               animate: true)),
     );
   }

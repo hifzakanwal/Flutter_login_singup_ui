@@ -1,6 +1,8 @@
 import 'package:firebase_auth/Component.dart';
 import 'package:flutter/material.dart';
 
+import 'loginscreen.dart';
+
 class forgetpassword extends StatefulWidget {
   const forgetpassword({super.key});
 
@@ -48,7 +50,12 @@ class _forgetpasswordState extends State<forgetpassword> {
             ),
           ),
         ),
-        roundbutton(title: "Send ", tapfun: () {}),
+        roundbutton(
+            title: "Send ",
+            tapfun: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => loginscreen()));
+            }),
       ]),
     );
   }
